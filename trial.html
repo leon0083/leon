@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LEON</title>
+  <style>
+    :root {
+      --primary: #0f1741;
+      --light-bg: #044e97;
+      --text: #020b0b;
+      --white: #ffffff;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      background-color: var(--light-bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 60px 20px;
+      text-align: center;
+      animation: fadeIn 1s ease-in;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      border-left: 5px solid var(--primary);
+      padding-left: 10px;
+      animation: slideIn 0.6s ease;
+    }
+
+    .card {
+      background-color: var(--white);
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      animation: fadeInUp 1s ease;
+    }
+
+    .skills ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills li {
+      background-color: #dbeafe;
+      color: #1e40af;
+      margin: 5px;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      transition: transform 0.3s;
+    }
+
+    .skills li:hover {
+      transform: scale(1.05);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: var(--white);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 1s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-card h3 {
+      color: var(--primary);
+    }
+
+    .contact a {
+      display: inline-block;
+      color: var(--primary);
+      text-decoration: none;
+      margin-top: 10px;
+      transition: color 0.3s;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+      color: #1d4ed8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f1f5f9;
+      color: #6b7280;
+      font-size: 0.9rem;
+      animation: fadeIn 1s ease-in;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .section-title {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ADITYA GAJMAL</h1>
+    <p>Computer Engineering Student</p>
+  </header>
+
+  <div class="container">
+
+    <section class="about card">
+      <h2 class="section-title">About Me</h2>
+      <p> I’m Aditya Kishor Gajmal, a 21-year-old aspiring Frontend Developer currently pursuing my engineering degree at ESIET College of Engineering. I’m passionate about creating clean, responsive, and user-friendly web interfaces that bring ideas to life.
+
+I’m constantly learning and improving my skills in HTML, CSS, JavaScript, and modern frameworks like React. My goal is to join a dynamic team where I can grow as a developer, contribute to exciting projects, and build amazing digital experiences.
+
+</p>
+    </section>
+
+    <section class="skills card">
+      <h2 class="section-title">Skills</h2>
+      <ul>
+        <li>python</li>
+        <li>javascript</li>
+        <li>HTML</li>
+        <li>c++</li>
+        <li>MySQL</li>
+        <li>Bgmi</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="section-title">Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <h3>E-commerce Website</h3>
+          <p>created e-commerce web using HTML CSS for personal buisness.</p>        
+        </div>
+        <div class="project-card">
+          <h3>class projects</h3>
+          <p>Have experience working with team.while doing multiple clg projects</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact card">
+      <h2 class="section-title">Contact</h2>
+      <p>Email: <a href="mailto:adityagajmal541@gmail.com">adityagajmal541@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/leon0083" target="_blank">github</a></p>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; 2025 aditya gajmal| Built with HTML & CSS only
+  </footer>
+
+</body>
+</html>
